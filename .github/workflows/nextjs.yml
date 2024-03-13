@@ -80,7 +80,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.runner }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build --config next.config.mjs
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: List files after build
         run: ls -al
       - name: Upload artifact

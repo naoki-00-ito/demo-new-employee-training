@@ -1,2 +1,2 @@
-# demo new employee training
-新人研修講義用サイト
+# lecture demo app
+講義用App

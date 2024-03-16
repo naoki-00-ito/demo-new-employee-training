@@ -26,9 +26,7 @@ const Cards = ({ srcs, noJs }: Props) => {
   const ref = useRef(null);
   const containrRef = useRef(null);
 
-  if (!noJs) {
-    useScrollSlide({ ref: ref, containrRef: containrRef });
-  }
+  useScrollSlide({ ref: ref, containrRef: containrRef, invalid: noJs });
 
   return (
     <Flex ref={ref} alignItems={'center'} py={3} overflowX={'hidden'}>

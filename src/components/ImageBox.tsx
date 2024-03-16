@@ -15,9 +15,12 @@ const ImageBox = ({ src, imagePosition = 'left', noJs }: Props) => {
   const imageRef = useRef(null);
   const textRef = useRef(null);
 
-  if (!noJs) {
-    useScrollScaleUp({ ref: imageBoxRef, imageRef: imageRef, textRef: textRef });
-  }
+  useScrollScaleUp({
+    ref: imageBoxRef,
+    imageRef: imageRef,
+    textRef: textRef,
+    invalid: noJs,
+  });
 
   return (
     <Flex height={'100vh'} py={3} ref={imageBoxRef}>

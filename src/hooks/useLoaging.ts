@@ -14,7 +14,7 @@ const useLoaging = ({ ref }: Args) => {
       didEffect.current = true;
       gsap.to(ref.current, {
         delay: loading,
-        opacity: 0,
+        autoAlpha: 0,
         y: 50,
       });
     }

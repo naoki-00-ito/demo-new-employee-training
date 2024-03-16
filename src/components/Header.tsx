@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Container,
   useDisclosure,
   Drawer,
   DrawerBody,
@@ -22,33 +23,36 @@ const Header = () => {
     <Box
       as='header'
       width='100%'
-      position='sticky'
+      position='fixed'
       top={0}
+      left={0}
       py={3}
       bg={'rgba(255, 255, 255, 0.7)'}
     >
-      <Button colorScheme='blue' onClick={onOpen}>
-        Menu Open
-      </Button>
-      <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
-          <DrawerBody>
-            <UnorderedList>
-              {links.map((link, i) => {
-                return (
-                  <ListItem key={i}>
-                    <Link color='teal.500' href={link.href}>
-                      {link.name}
-                    </Link>
-                  </ListItem>
-                );
-              })}
-            </UnorderedList>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+      <Container maxW='1200px' display={'flex'} justifyContent={'flex-end'}>
+        <Button colorScheme='teal' onClick={onOpen}>
+          Menu
+        </Button>
+        <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
+            <DrawerBody>
+              <UnorderedList>
+                {links.map((link, i) => {
+                  return (
+                    <ListItem key={i}>
+                      <Link color='teal.500' href={link.href}>
+                        {link.name}
+                      </Link>
+                    </ListItem>
+                  );
+                })}
+              </UnorderedList>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Container>
     </Box>
   );
 };

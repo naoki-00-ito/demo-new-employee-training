@@ -3,9 +3,10 @@ import { gsap } from 'gsap';
 
 type Args = {
   ref: MutableRefObject<null>;
+  delay?: number;
 };
 
-const useFadeIn = ({ ref }: Args) => {
+const useFadeIn = ({ ref, delay }: Args) => {
   const didEffect = useRef(false);
 
   useLayoutEffect(() => {
@@ -19,6 +20,7 @@ const useFadeIn = ({ ref }: Args) => {
       });
 
       gsap.to(ref.current, {
+        delay: delay ? delay : 0,
         autoAlpha: 1,
         y: 0,
         scale: 1,

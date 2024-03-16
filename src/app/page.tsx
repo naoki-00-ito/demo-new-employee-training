@@ -1,6 +1,7 @@
 import { Container } from '@chakra-ui/react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Loading from '@/components/Loading';
 import MainVisual from '@/components/MainVisual';
 import ImageBox from '@/components/ImageBox';
 import Cards from '@/components/Cards';
@@ -9,6 +10,8 @@ export default function Home() {
   return (
     <Container maxW='1200px'>
       <Header />
+
+      <Loading />
 
       <main>
         <MainVisual />

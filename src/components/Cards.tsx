@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 import { FaTiktok, FaInstagram } from 'react-icons/fa';
+import imagePath from '@/libs/imagePath';
 
 type Props = {
   srcs: string[];
@@ -41,7 +42,7 @@ const Cards = ({ srcs, noJs }: Props) => {
           return (
             <Card maxW='sm' key={i} className='ts-scroll-slide'>
               <CardBody>
-                <Image src={src} alt='' borderRadius='lg' />
+                <Image src={imagePath(src)} alt='' borderRadius='lg' />
                 <Stack mt='6' spacing='3'>
                   <Heading size='md'>チャロ</Heading>
                   <Text>可愛い。</Text>

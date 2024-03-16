@@ -19,16 +19,19 @@ import { FaTiktok, FaInstagram } from 'react-icons/fa';
 
 type Props = {
   srcs: string[];
+  noJs?: boolean;
 };
 
-const Cards = ({ srcs }: Props) => {
+const Cards = ({ srcs, noJs }: Props) => {
   const ref = useRef(null);
   const containrRef = useRef(null);
 
-  useScrollSlide({ ref: ref, containrRef: containrRef });
+  if (!noJs) {
+    useScrollSlide({ ref: ref, containrRef: containrRef });
+  }
 
   return (
-    <Flex ref={ref} alignItems={'center'} height={'100vh'} py={3} overflowX={'hidden'}>
+    <Flex ref={ref} alignItems={'center'} py={3} overflowX={'hidden'}>
       <Flex
         flexWrap={'wrap'}
         justifyContent={'center'}

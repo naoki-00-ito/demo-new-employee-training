@@ -28,6 +28,7 @@ const Header = () => {
       left={0}
       py={3}
       bg={'rgba(255, 255, 255, 0.7)'}
+      zIndex={999}
     >
       <Container maxW='1200px' display={'flex'} justifyContent={'flex-end'}>
         <Button colorScheme='teal' onClick={onOpen}>

@@ -7,14 +7,17 @@ import useScrollScaleUp from '@/hooks/useScrollScaleUp';
 type Props = {
   src: string;
   imagePosition?: 'left' | 'right';
+  noJs?: boolean;
 };
 
-const ImageBox = ({ src, imagePosition = 'left' }: Props) => {
+const ImageBox = ({ src, imagePosition = 'left', noJs }: Props) => {
   const imageBoxRef = useRef(null);
   const imageRef = useRef(null);
   const textRef = useRef(null);
 
-  useScrollScaleUp({ ref: imageBoxRef, imageRef: imageRef, textRef: textRef });
+  if (!noJs) {
+    useScrollScaleUp({ ref: imageBoxRef, imageRef: imageRef, textRef: textRef });
+  }
 
   return (
     <Flex height={'100vh'} py={3} ref={imageBoxRef}>

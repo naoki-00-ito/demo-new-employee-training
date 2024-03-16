@@ -19,6 +19,7 @@ const useScrollSlide = ({ ref, containrRef }: Args) => {
       const slides = gsap.utils.toArray('.ts-scroll-slide');
       const width = ref.current?.offsetWidth;
 
+      gsap.set(ref.current, { height: '100vh' });
       gsap.set(containrRef.current, { flexWrap: 'nowrap' });
       gsap.set(slides, { width: '300px', maxWidth: '100%', whiteSpace: 'nowrap' });
 

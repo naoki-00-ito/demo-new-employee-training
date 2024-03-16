@@ -4,10 +4,16 @@ import { useRef } from 'react';
 import { Flex, Box, Heading, Text } from '@chakra-ui/react';
 import useFadeIn from '@/hooks/useFadeIn';
 
-const MainVisual = () => {
+type Props = {
+  noJs?: boolean;
+};
+
+const MainVisual = ({ noJs }: Props) => {
   const ref = useRef(null);
 
-  useFadeIn({ ref: ref });
+  if (!noJs) {
+    useFadeIn({ ref: ref });
+  }
 
   return (
     <Flex justifyContent={'center'} alignItems={'center'} height={'100vh'}>

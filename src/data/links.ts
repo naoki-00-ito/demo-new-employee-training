@@ -10,7 +10,7 @@ const links = [
     href: updateEnvPath('/html-css'),
   },
   {
-    name: updateEnvPath('HTML + CSS + JavaScript'),
+    name: 'HTML + CSS + JavaScript',
     href: updateEnvPath('/'),
   },
 ];

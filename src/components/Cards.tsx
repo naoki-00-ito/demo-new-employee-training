@@ -28,7 +28,7 @@ const Cards = ({ srcs }: Props) => {
   useScrollSlide({ ref: ref, containrRef: containrRef });
 
   return (
-    <Flex ref={ref} alignItems={'center'} height={'100vh'} py={3}>
+    <Flex ref={ref} alignItems={'center'} height={'100vh'} py={3} overflowX={'hidden'}>
       <Flex
         flexWrap={'wrap'}
         justifyContent={'center'}

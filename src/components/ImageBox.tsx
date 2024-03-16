@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Flex, Center, Box, Image, Heading } from '@chakra-ui/react';
+import { Flex, Center, Image, Heading } from '@chakra-ui/react';
 import useScrollScaleUp from '@/hooks/useScrollScaleUp';
 
 type Props = {

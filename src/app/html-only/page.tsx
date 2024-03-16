@@ -7,20 +7,22 @@ import Cards from '@/components/Cards';
 import styles from '@/styles/HtmlOnly.module.css';
 
 export default function HtmlOnly() {
+  const noJs = true;
+
   return (
-    <Container maxW='1200px' className={styles.HtmlOnly}>
+    <Container className={styles.HtmlOnly}>
       <Header />
 
       <main>
-        <MainVisual />
+        <MainVisual noJs={noJs} />
 
-        <ImageBox src='/01.JPG' />
+        <ImageBox src='/01.JPG' noJs={noJs} />
 
-        <ImageBox src='/02.JPG' imagePosition='right' />
+        <ImageBox src='/02.JPG' imagePosition='right' noJs={noJs} />
 
-        <ImageBox src='/03.JPG' />
+        <ImageBox src='/03.JPG' noJs={noJs} />
 
-        <ImageBox src='/04.JPG' imagePosition='right' />
+        <ImageBox src='/04.JPG' imagePosition='right' noJs={noJs} />
 
         <Cards
           srcs={[
@@ -37,6 +39,7 @@ export default function HtmlOnly() {
             '/03.JPG',
             '/04.JPG',
           ]}
+          noJs={noJs}
         />
       </main>
 

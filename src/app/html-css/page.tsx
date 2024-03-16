@@ -5,7 +5,7 @@ import MainVisual from '@/components/MainVisual';
 import ImageBox from '@/components/ImageBox';
 import Cards from '@/components/Cards';
 
-export default function Home() {
+export default function HtmlCss() {
   const noJs = true;
 
   return (

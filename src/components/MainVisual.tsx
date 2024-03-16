@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { Flex, Box, Heading, Text } from '@chakra-ui/react';
 import useFadeIn from '@/hooks/useFadeIn';
+import loading from '@/data/loading';
 
 type Props = {
   noJs?: boolean;
@@ -12,7 +13,7 @@ const MainVisual = ({ noJs }: Props) => {
   const ref = useRef(null);
 
   if (!noJs) {
-    useFadeIn({ ref: ref });
+    useFadeIn({ ref: ref, delay: loading + 0.5 });
   }
 
   return (

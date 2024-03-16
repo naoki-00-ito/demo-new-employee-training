@@ -5,15 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 type Args = {
   ref: MutableRefObject<HTMLDivElement | null>;
   containrRef: MutableRefObject<HTMLDivElement | null>;
+  invalid?: boolean;
 };
 
-const useScrollSlide = ({ ref, containrRef }: Args) => {
+const useScrollSlide = ({ ref, containrRef, invalid }: Args) => {
   gsap.registerPlugin(ScrollTrigger);
 
   const didEffect = useRef(false);
 
   useLayoutEffect(() => {
-    if (!didEffect.current) {
+    if (!didEffect.current && !invalid) {
       didEffect.current = true;
 
       const slides = gsap.utils.toArray('.ts-scroll-slide');

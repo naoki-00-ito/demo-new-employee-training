@@ -4,13 +4,14 @@ import { gsap } from 'gsap';
 type Args = {
   ref: MutableRefObject<null>;
   delay?: number;
+  invalid?: boolean;
 };
 
-const useFadeIn = ({ ref, delay }: Args) => {
+const useFadeIn = ({ ref, delay, invalid }: Args) => {
   const didEffect = useRef(false);
 
   useLayoutEffect(() => {
-    if (!didEffect.current) {
+    if (!didEffect.current && !invalid) {
       didEffect.current = true;
 
       gsap.set(ref.current, {

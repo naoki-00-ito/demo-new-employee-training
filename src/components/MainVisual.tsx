@@ -12,9 +12,7 @@ type Props = {
 const MainVisual = ({ noJs }: Props) => {
   const ref = useRef(null);
 
-  if (!noJs) {
-    useFadeIn({ ref: ref, delay: loading + 0.5 });
-  }
+  useFadeIn({ ref: ref, delay: loading + 0.5, invalid: noJs });
 
   return (
     <Flex justifyContent={'center'} alignItems={'center'} height={'100vh'}>

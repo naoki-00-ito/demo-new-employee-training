@@ -1,15 +1,17 @@
+import updateEnvPath from '@/libs/updateEnvPath';
+
 const links = [
   {
     name: 'HTML Only',
-    href: '/html-only',
+    href: updateEnvPath('/html-only'),
   },
   {
     name: 'HTML + CSS',
-    href: '/html-css',
+    href: updateEnvPath('/html-css'),
   },
   {
-    name: 'HTML + CSS + JavaScript',
-    href: '/',
+    name: updateEnvPath('HTML + CSS + JavaScript'),
+    href: updateEnvPath('/'),
   },
 ];
 

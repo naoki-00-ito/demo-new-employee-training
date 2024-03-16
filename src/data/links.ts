@@ -1,7 +1,7 @@
 const links = [
   {
     name: 'HTML Only',
-    href: '/html',
+    href: '/html-only',
   },
   {
     name: 'HTML + CSS',
@@ -9,7 +9,7 @@ const links = [
   },
   {
     name: 'HTML + CSS + JavaScript',
-    href: '/html-css-js',
+    href: '/',
   },
 ];
 

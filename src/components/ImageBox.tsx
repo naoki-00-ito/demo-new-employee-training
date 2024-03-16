@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { Flex, Center, Image, Heading } from '@chakra-ui/react';
 import useScrollScaleUp from '@/hooks/useScrollScaleUp';
-import imagePath from '@/libs/imagePath';
+import updateEnvPath from '@/libs/updateEnvPath';
 
 type Props = {
   src: string;
@@ -26,7 +26,7 @@ const ImageBox = ({ src, imagePosition = 'left', noJs }: Props) => {
   return (
     <Flex height={'100vh'} py={3} ref={imageBoxRef}>
       <Center flex={1} order={imagePosition === 'right' ? 2 : 1}>
-        <Image src={imagePath(src)} alt='' ref={imageRef} />
+        <Image src={updateEnvPath(src)} alt='' ref={imageRef} />
       </Center>
 
       <Center flex={1} order={imagePosition === 'right' ? 1 : 2}>

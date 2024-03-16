@@ -6,15 +6,16 @@ type Args = {
   ref: MutableRefObject<null>;
   imageRef: MutableRefObject<null>;
   textRef: MutableRefObject<null>;
+  invalid?: boolean;
 };
 
-const useScrollScaleUp = ({ ref, imageRef, textRef }: Args) => {
+const useScrollScaleUp = ({ ref, imageRef, textRef, invalid }: Args) => {
   gsap.registerPlugin(ScrollTrigger);
 
   const didEffect = useRef(false);
 
   useLayoutEffect(() => {
-    if (!didEffect.current) {
+    if (!didEffect.current && !invalid) {
       didEffect.current = true;
 
       const effect = gsap.timeline({

@@ -1,4 +1,4 @@
-# lecture demo app
+# Lecture Demo App
 
 講義用App
 

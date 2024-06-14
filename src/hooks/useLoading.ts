@@ -6,7 +6,7 @@ type Args = {
   ref: MutableRefObject<null>;
 };
 
-const useLoaging = ({ ref }: Args) => {
+const useLoading = ({ ref }: Args) => {
   const didEffect = useRef(false);
 
   useLayoutEffect(() => {
@@ -21,4 +21,4 @@ const useLoaging = ({ ref }: Args) => {
   });
 };
 
-export default useLoaging;
+export default useLoading;

@@ -2,11 +2,11 @@
 
 import { useRef } from 'react';
 import { Box, Container, Spinner } from '@chakra-ui/react';
-import useLoaging from '@/hooks/useLoaging';
+import useLoading from '@/hooks/useLoading';
 
 const Loading = () => {
   const ref = useRef(null);
-  useLoaging({ ref: ref });
+  useLoading({ ref: ref });
 
   return (
     <Box
